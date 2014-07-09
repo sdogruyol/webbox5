@@ -17,4 +17,4 @@ Deployment için root dizininde; `creds.rb` dosyasını oluşturun.
 
 gibi statik sayfaları sunacağınız web sunucusu ile ilgili bilgileri girin.
 
-[http://webbox5.webbox.io](webbox5.webbox.io)
+[webbox5.webbox.io](http://webbox5.webbox.io)
