@@ -1,0 +1,18 @@
+---
+pageable: true
+per_page: 10
+---
+<%= partial "partials/head" %>
+
+<div class="block text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3><strong><%= tagname %></strong> etiketiyle <%= articles.count %> kayıt.</h3>
+                
+                <%= partial "partials/episodes" %>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,31 @@
+<% wrap_layout :layout do %>
+    <%= partial "partials/head" %>
+    <%
+    file_size = Filesize.from("#{current_page.metadata[:page]['length']} B").to_s("Mb")
+    file_download = current_page.metadata[:page]['download']
+    time_data = current_page.date.strftime('%Y-%m-%d %H:%M:%S')
+    i18n_date = I18n.localize(current_page.date, :format => "%e %B %Y, %A, saat %H:%M")
+    %>
+    <div class="block text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1><a href="<%= current_page.url %>"><%= current_page.title %></a></h1>
+                    <time datetime="<%= time_data %>"><%= i18n_date %></time>
+                    
+                    <%= partial "partials/share", :locals => { :article => current_page } %>
+                    
+                    <div class="col-sm-8 col-sm-offset-2">
+                        
+                        <div id="markdown-content">
+                            <%= yield %>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<% end %>

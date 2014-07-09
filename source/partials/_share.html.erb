@@ -1,0 +1,8 @@
+<div class="sharing">
+    <%
+    sharing_url = "http://webbox5.webbox.io#{article.url}"
+    sharing_status = "webBox5 PodCast: #{article.title}"
+    %>
+    <%= share :network => "twitter", :url => sharing_url, :status => sharing_status %>
+    <%= share :network => "facebook", :url => sharing_url, :status => sharing_status %>
+</div>

@@ -1,0 +1,22 @@
+<%
+page_articles.each_with_index do |article, i|
+    file_size = Filesize.from("#{article.metadata[:page]['length']} B").to_s("Mb")
+    i18n_date = I18n.localize(article.date, :format => "%e %B %Y, %A, saat %H:%M")
+    time_data = article.date.strftime('%Y-%m-%d %H:%M:%S')
+%>
+<div class="episode">
+    <h3><%= link_to article.title, article, :target => "_self", :title => "Bölüm notları ve detaylar için tıklayın" %></h3>
+    <p>
+        <time datetime="<%= time_data %>"><%= i18n_date %></time><br/>
+        <strong><%= file_size %></strong> / <%= article.metadata[:page]["duration"] %> dakika
+    </p>
+    <p class="tags">
+        <%= article.metadata[:page]["tags"].split(",").map{ |t| "<a href='#{tag_path(t)}' class='badge'>#{t}</a>" }.join("") %>
+    </p>
+    <p>
+        <a title="İndir" href="<%= article.metadata[:page]['download'] %>"><%= icon "download", ["2x"] %></a>
+    </p>
+    <%= partial "partials/share", :locals => {:article => article} %>
+</div>
+<% end %>
+
