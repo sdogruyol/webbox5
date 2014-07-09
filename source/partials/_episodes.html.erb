@@ -13,8 +13,9 @@ page_articles.each_with_index do |article, i|
     <p class="tags">
         <%= article.metadata[:page]["tags"].split(",").map{ |t| "<a href='#{tag_path(t)}' class='badge'>#{t}</a>" }.join("") %>
     </p>
-    <p>
+    <p class="links">
         <a title="İndir" href="<%= article.metadata[:page]['download'] %>"><%= icon "download", ["2x"] %></a>
+        <a title="RSS" href="/feed.xml"><%= icon "rss", ["2x"] %></a>
     </p>
     <%= partial "partials/share", :locals => {:article => article} %>
 </div>
