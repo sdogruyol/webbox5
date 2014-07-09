@@ -11,7 +11,7 @@ module CustomHelpers
   def share(options={})
     options[:classes] ||= []
     options[:via] ||= "webboxio"
-    options[:hash_tags] ||= "webboxtraining"
+    options[:hash_tags] ||= "webbox5"
 
     case options[:network]
     when "twitter"
