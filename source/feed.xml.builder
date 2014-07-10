@@ -9,8 +9,8 @@ general_keywords = "webbox5,development,yazılım,yazilim,software,python,ruby,p
 xml.instruct!
 xml.rss "xmlns:itunes" => "http://www.itunes.com/dtds/podcast-1.0.dtd", :version => "2.0" do
   xml.channel do
-    xml.atom :link, "xmlns:atom" => "http://www.w3.org/2005/Atom", :rel => "self", :type => "application/rss+xml", :href => "http://devpod.org/feed.xml"
-        xml.title "devPod"
+    xml.atom :link, "xmlns:atom" => "http://www.w3.org/2005/Atom", :rel => "self", :type => "application/rss+xml", :href => "http://webbox5.webbox.io/feed.xml"
+        xml.title "webBox5"
         xml.link general_site_url
         xml.language "tr-tr"
         xml.copyright general_author
