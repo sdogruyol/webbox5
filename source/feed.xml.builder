@@ -2,7 +2,7 @@ general_site_url = "http://webbox5.webbox.io/"
 general_author = "webBox.io"
 general_author_email = "hello@webbox.io"
 general_subtitle = "Her cuma 5 dakika!"
-general_summary = "webBox.io ekibi olarak sizlere 5 dakikalık bir podcast hazırladık!"
+general_summary = "webBox.io ekibi olarak sizlere 5 dakikalık, ilaç niyetine developer podcasti hazırladık!"
 general_description = "5 dakikada haftanın özeti. Development dünyasında neler oldu? Yeni çıkan kütüphaneler, dedikodular, kitaplar ve açık kaynak dünyası!"
 general_keywords = "webbox5,development,yazılım,yazilim,software,python,ruby,php,django,rails,apple,mac,ipad,iphone,ios,applescript,shell,bash,textmate,vim,atom"
 
