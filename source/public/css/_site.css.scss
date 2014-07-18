@@ -14,6 +14,7 @@ a {
 
 #splash {
   text-align: center;
+  margin-bottom: 4em;
   h1 {
     font-weight: 600;
     margin: 1em 0;
@@ -50,6 +51,7 @@ a {
     background-color: $webbox-color;
     display: inline-block;
     margin-right: 1em;
+    margin-bottom: 1em;
   }
 }
 
